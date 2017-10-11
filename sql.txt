@@ -1,0 +1,61 @@
+user
+	userid
+	password
+	first name
+	last name
+	date of birth
+	date of joining
+	phone number
+	gmail
+	address
+	teacher designation
+	role
+	
+class
+	class code
+	class name
+	teacher code
+	max students
+
+class maping
+	user id
+	class code
+
+student parent maping
+	student id
+	parent id
+
+student parent names
+	user id
+	father name
+	mother name
+	
+roll no maping
+	student id
+	roll no
+
+subjects
+	subject code
+	subject name 8
+	max marks 8
+
+exam
+	exam id
+	exam name
+
+status
+	status id
+	status name
+
+role
+	role id
+	role name
+
+report
+	user id
+	class code
+	marks 8
+	total
+	grade
+	%
+	status 2
