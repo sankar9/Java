@@ -55,6 +55,7 @@ role
 report
 	user id fk
 	class code fk
+	exam id fk
 	marks 8
 	total auto cal
 	grade not null char(1)
