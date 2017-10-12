@@ -1,61 +1,63 @@
 user
-	userid
-	password
-	first name
-	last name
+	userid pk
+	password not null defe
+	first name not null
+	last name not null
+	gender not null
 	date of birth
 	date of joining
-	phone number
+	phone number not null
 	gmail
-	address
-	teacher designation
-	role
+	address not null
+	designation
+	role not null
 	
 class
-	class code
-	class name
-	teacher code
-	max students
+	class code pk
+	class name not null
+	teacher code fk
+	subject code fk
+	max students not null
+	
+class strength
+	class code fk unique
+	strength not null
 
 class maping
-	user id
-	class code
+	user id fk unique
+	class code fk
+
+student roll no maping
+	user id fk unique
+	roll no not null
 
 student parent maping
-	student id
-	parent id
-
-student parent names
-	user id
-	father name
-	mother name
-	
-roll no maping
-	student id
-	roll no
+	student id fk unique
+	parent id fk
 
 subjects
-	subject code
-	subject name 8
-	max marks 8
+	subject code pk
+	subject name 8 not null
+	max marks 8 not null
 
 exam
-	exam id
-	exam name
+	exam id pk
+	exam name not null
 
 status
-	status id
-	status name
+	status id pk
+	status name not null
 
 role
-	role id
-	role name
+	role id pk
+	role name not null
 
 report
-	user id
-	class code
+	user id fk
+	class code fk
 	marks 8
-	total
-	grade
-	%
-	status 2
+	total auto cal
+	grade not null char(1)
+	% auto cal
+	status not null
+	parent status not null
