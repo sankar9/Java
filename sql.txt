@@ -1,29 +1,35 @@
 user
-	userid pk
-	password not null defe
+	Userid pk
+	password not null default
 	first name not null
 	last name not null
 	gender not null
 	date of birth
 	date of joining
-	phone number not null
-	gmail
-	address not null
+        father name
+	mother name
 	designation
-	role not null
+	phone number not null
+	emailAddress
+	Address not null
+	designation
+	role not null fk
 	
 class
 	class code pk
 	class name not null
-	teacher code fk
-	subject code fk
+	curriculum   code fk
 	max students not null
+	
+class -Teacher mapping
+	class code fk unique
+	teacher code fk	
 	
 class strength
 	class code fk unique
-	strength not null
+	current_strength not null
 
-class maping
+student-class mapping
 	user id fk unique
 	class code fk
 
@@ -31,14 +37,14 @@ student roll no maping
 	user id fk unique
 	roll no not null
 
-student parent maping
+student parent map																		ping
 	student id fk unique
 	parent id fk
 
-subjects
-	subject code pk
-	subject name 8 not null
-	max marks 8 not null
+curriculum
+	curriculum code pk
+	subject name 8 
+	max marks 8 
 
 exam
 	exam id pk
@@ -55,7 +61,7 @@ role
 report
 	user id fk
 	class code fk
-	exam id fk
+	examid fk
 	marks 8
 	total auto cal
 	grade not null char(1)
